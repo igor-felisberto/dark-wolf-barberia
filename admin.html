@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Painel Dark Wolf</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page"></body>
+    <div id="loginAdmin">
+        <h2>🔐 Painel Administrativo</h2>
+      
+        <input
+          type="email"
+          id="emailAdmin"
+          placeholder="E-mail"
+        >
+      
+        <input
+          type="password"
+          id="senhaAdmin"
+          placeholder="Senha"
+        >
+      
+        <button id="entrarAdmin">Entrar</button>
+        
+        <p id="erroLogin"></p>
+      </div>
+  <header class="topo">
+    <button id="btnSair">Sair</button>
+    <div class="logo">
+      <span class="logo-icon">🐺</span>
+
+      <div>
+        <strong>DARK WOLF</strong>
+        <small>PAINEL ADMINISTRATIVO</small>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn-dourado">
+      Voltar ao site
+    </a>
+
+  </header>
+
+
+  <main class="painel-admin">
+
+    <div class="titulo-secao">
+      <p>ADMINISTRAÇÃO</p>
+      <h2>Agenda da Barbearia</h2>
+    </div>
+    <div class="conteudo-admin">
+        <div class="resumo-admin">
+
+            <div class="card-resumo">
+              <span>Clientes do dia</span>
+              <strong id="totalClientes">0</strong>
+            </div>
+          
+            <div class="card-resumo">
+              <span>Atendidos hoje</span>
+              <strong id="totalAtendidos">0</strong>
+            </div>
+          
+            <div class="card-resumo">
+              <span>Faturamento previsto</span>
+              <strong id="faturamentoPrevisto">R$ 0,00</strong>
+            </div>
+          
+            <div class="card-resumo">
+              <span>Faturamento realizado</span>
+              <strong id="faturamentoRealizado">R$ 0,00</strong>
+            </div>
+          
+            <div class="card-resumo">
+              <span>Próximo atendimento</span>
+              <strong id="proximoHorario">--:--</strong>
+            </div>
+          
+          </div>
+
+    <div class="filtro-agenda">
+
+      <label for="dataFiltro">
+        Escolha o dia
+      </label>
+
+      <input
+        type="date"
+        id="dataFiltro"
+      >
+
+    </div>
+
+
+    <div id="listaAgendamentos">
+
+      <p class="sem-agendamentos">
+        Escolha uma data para visualizar os clientes.
+      </p>
+
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Wolf Barbearia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="logo">
+      <span class="logo-icon">🐺</span>
+      <div>
+        <strong>DARK WOLF</strong>
+        <small>BARBEARIA</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#agendar">Agendar</a>
+    </nav>
+
+    <a class="btn-dourado" href="#agendar">Agendar Agora</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-conteudo">
+        <p class="tag">DARK WOLF BARBEARIA</p>
+        <h1>MAIS QUE UM CORTE,<br><span>É ATITUDE.</span></h1>
+        <p class="descricao">
+          Estilo, confiança e respeito. Escolha seu serviço e reserve seu horário.
+        </p>
+        <a class="btn-dourado btn-grande" href="#servicos">Escolher serviço</a>
+      </div>
+
+      <div class="hero-card">
+        <p>Agenda online</p>
+        <strong>Rápida. Simples. Profissional.</strong>
+        <span>Escolha o serviço, dia e horário em poucos segundos.</span>
+      </div>
+    </section>
+
+    <section class="servicos" id="servicos">
+      <div class="titulo-secao">
+        <p>NOSSOS SERVIÇOS</p>
+        <h2>Escolha como quer sair na régua</h2>
+      </div>
+
+      <div class="grid-servicos">
+        <article class="card-servico">
+          <div class="icone-servico">✂️</div>
+          <h3>Corte Masculino</h3>
+          <p>Acabamento moderno e personalizado.</p>
+          <strong>R$ 35,00</strong>
+          <button class="selecionar-servico" data-servico="Corte Masculino" data-preco="35">
+            Selecionar
+          </button>
+        </article>
+
+        <article class="card-servico">
+          <div class="icone-servico">🧔</div>
+          <h3>Barba</h3>
+          <p>Desenho, acabamento e alinhamento.</p>
+          <strong>R$ 35,00</strong>
+          <button class="selecionar-servico" data-servico="Barba" data-preco="35">
+            Selecionar
+          </button>
+        </article>
+
+        <article class="card-servico">
+          <div class="icone-servico">💈</div>
+          <h3>Corte + Barba</h3>
+          <p>Combo completo para renovar o visual.</p>
+          <strong>R$ 70,00</strong>
+          <button class="selecionar-servico" data-servico="Corte + Barba" data-preco="70">
+            Selecionar
+          </button>
+        </article>
+
+        <article class="card-servico">
+          <div class="icone-servico">✨</div>
+          <h3>Corte + Sobrancelha</h3>
+          <p>Detalhes que fazem diferença no resultado.</p>
+          <strong>R$ 40,00</strong>
+          <button class="selecionar-servico" data-servico="Corte + Sobrancelha" data-preco="40">
+            Selecionar
+          </button>
+        </article>
+      </div>
+    </section>
+    <section class="agendamento" id="agendar">
+
+      <div class="titulo-secao">
+        <p>AGENDAMENTO</p>
+        <h2>Escolha o dia e o horário</h2>
+      </div>
+    
+      <div class="area-agendamento">
+    
+        <div class="bloco-data">
+          <h3>Selecione a data</h3>
+    
+          <input
+            type="date"
+            id="dataAgendamento"
+          >
+        </div>
+    
+        <div class="bloco-horarios">
+          <h3>Horários disponíveis</h3>
+    
+          <div class="horarios">
+            <button class="horario">09:00</button>
+            <button class="horario">10:00</button>
+            <button class="horario">11:00</button>
+    
+            <button class="horario">13:00</button>
+            <button class="horario">14:00</button>
+            <button class="horario">15:00</button>
+    
+            <button class="horario">16:00</button>
+            <button class="horario">17:00</button>
+            <button class="horario">18:00</button>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="resumo-agendamento">
+    
+        <div>
+          <span>Serviço</span>
+          <strong id="servicoEscolhido">
+            Nenhum serviço selecionado
+          </strong>
+        </div>
+    
+        <div>
+          <span>Valor</span>
+          <strong id="precoEscolhido">
+            R$ 0,00
+          </strong>
+        </div>
+    
+      </div>
+    
+      <button
+        class="btn-dourado btn-grande"
+        id="continuarAgendamento"
+        disabled
+      >
+        Continuar agendamento
+      </button>
+      <div class="dados-cliente" id="dadosCliente">
+
+        <h3>Seus dados</h3>
+      
+        <input
+          type="text"
+          id="nomeCliente"
+          placeholder="Nome completo"
+        >
+      
+        <input
+          type="tel"
+          id="telefoneCliente"
+          placeholder="WhatsApp"
+        >
+      
+        <button
+          id="confirmarAgendamento"
+          class="btn-dourado btn-grande"
+        >
+          Confirmar agendamento
+        </button>
+      
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>DARK WOLF BARBEARIA</strong>
+    <span>Estilo hoje. Confiança sempre.</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+  </body>
+</html>
