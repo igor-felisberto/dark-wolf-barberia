@@ -1412,3 +1412,48 @@ footer strong {
     font-size: 17px;
   }
 }
+
+/* RESPONSIVIDADE DO PAINEL ADM */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .painel,
+  .admin-container,
+  .conteudo,
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  table {
+    width: 100% !important;
+    font-size: 13px;
+  }
+
+  input,
+  select,
+  button {
+    max-width: 100%;
+  }
+
+  .cards,
+  .dashboard,
+  .resumo,
+  .estatisticas {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+}
