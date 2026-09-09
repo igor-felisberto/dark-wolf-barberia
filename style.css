@@ -1376,3 +1376,39 @@ footer strong {
     max-width: 100% !important;
   }
 }
+
+/* ÁREA ADM */
+.area-adm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 35px 15px;
+  margin-top: 30px;
+}
+
+.area-adm a {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #555;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+  .area-adm {
+    display: flex !important;
+    padding: 30px 15px 50px;
+  }
+
+  .area-adm a {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    font-size: 17px;
+  }
+}
