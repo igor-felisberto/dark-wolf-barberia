@@ -9,7 +9,7 @@
   "theme_color": "#111111",
   "icons": [
     {
-      "src": "./logo-darkwolf.png",
+        "src": "./icone-darkwolf.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
