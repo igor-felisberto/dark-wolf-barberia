@@ -280,24 +280,34 @@ function mostrarConfirmacao(nome, servico, data, horario) {
       });
 }
 
+// ===== INSTALAÇÃO DO APLICATIVO =====
 let deferredPrompt;
 
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  deferredPrompt = event;
-});
+const btnInstalar = document.getElementById("btnInstalar");
 
-const botaoInstalar = document.getElementById("btnInstalar");
+if (btnInstalar) {
+  btnInstalar.style.display = "none";
 
-if (botaoInstalar) {
-  botaoInstalar.addEventListener("click", async () => {
-    if (!deferredPrompt) {
-      alert("A instalação ainda não está disponível. Tente atualizar a página.");
-      return;
-    }
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredPrompt = event;
+
+    btnInstalar.style.display = "block";
+  });
+
+  btnInstalar.addEventListener("click", async () => {
+    if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
+
     await deferredPrompt.userChoice;
+
     deferredPrompt = null;
+    btnInstalar.style.display = "none";
+  });
+
+  window.addEventListener("appinstalled", () => {
+    deferredPrompt = null;
+    btnInstalar.style.display = "none";
   });
 }

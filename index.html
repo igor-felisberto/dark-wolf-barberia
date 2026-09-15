@@ -178,3 +178,86 @@
       <div class="area-agendamento">
 
         <div class="bloco-data">
+
+        }
+
+        <label for="dataAgendamento">Escolha a data</label>
+          <input type="date" id="dataAgendamento">
+        </div>
+
+        <div class="bloco-horarios">
+          <p>Escolha o horário</p>
+
+          <div class="grid-horarios">
+            <button class="horario">08:00</button>
+            <button class="horario">09:00</button>
+            <button class="horario">10:00</button>
+            <button class="horario">11:00</button>
+            <button class="horario">13:00</button>
+            <button class="horario">14:00</button>
+            <button class="horario">15:00</button>
+            <button class="horario">16:00</button>
+            <button class="horario">17:00</button>
+            <button class="horario">18:00</button>
+            <button class="horario">19:00</button>
+          </div>
+        </div>
+
+        <div class="resumo-agendamento">
+          <p>Serviço: <strong id="servicoEscolhido">Nenhum selecionado</strong></p>
+          <p>Valor: <strong id="precoEscolhido">R$ 0,00</strong></p>
+
+          <button id="continuarAgendamento" disabled>
+            CONTINUAR
+          </button>
+        </div>
+
+        <div id="dadosCliente" style="display: none;">
+          <h3>Seus dados</h3>
+
+          <input
+            type="text"
+            id="nomeCliente"
+            placeholder="Seu nome"
+          >
+
+          <input
+            type="tel"
+            id="telefoneCliente"
+            placeholder="Seu WhatsApp"
+          >
+
+          <button id="confirmarAgendamento">
+            CONFIRMAR AGENDAMENTO
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="area-admin">
+      <a href="admin.html" class="botao-secundario">
+        ÁREA ADMINISTRATIVA
+      </a>
+    </section>
+
+    <section class="area-instalar">
+      <button id="btnInstalar">
+        BAIXAR APLICATIVO
+      </button>
+    </section>
+    
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js");
+    }
+  </script>
+
+</body>
+</html>
+          
