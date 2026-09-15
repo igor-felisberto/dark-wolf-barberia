@@ -3,266 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dark Wolf Barbearia</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="./manifest.json">
+
   <meta name="theme-color" content="#111111">
 </head>
+
 <body>
 
+  <header class="topo">
+    <div class="marca-topo">
+      <span>DESDE 2015</span>
+      <strong>DARK WOLF</strong>
+      <small>BARBEARIA</small>
+    </div>
 
-    <header class="topo">
-      <div class="marca-topo">
-        <span>DESDE 2015</span>
-        <strong>DARK WOLF</strong>
-        <small>BARBEARIA</small>
-      </div>
-    
-      <a class="btn-topo" href="#agendar">
-        AGENDAR
-      </a>
-    </header>
-    
-    <main>
-      <section class="hero hero-nova" id="inicio">
-    
-        <div class="hero-overlay"></div>
-    
-        <div class="hero-nova-conteudo">
-    
-          <div class="emblema-imagem">
-            <img src="logo-darkwolf.png" alt="Dark Wolf Barbearia">
-          </div>
-    
-          <p class="slogan-principal">
-            SEU ESTILO EM BOAS MÃOS
-          </p>
-    
-          <div class="acoes-inicio">
-    
-            <a href="#servicos" class="botao-agendar-principal">
-              <span class="icone-botao">▣</span>
-    
-              <span>
-                AGENDAR HORÁRIO
-              </span>
-    
-              <span class="seta">›</span>
-            </a>
-    
-            <a href="#agendar" class="botao-secundario">
-              <span class="icone-botao">☷</span>
-    
-              <span>
-                MEUS AGENDAMENTOS
-              </span>
-    
-              <span class="seta">›</span>
-            </a>
-    
-          </div>
-    
-          <div class="servicos-mini">
-    
-            <div>
-              <span>✂</span>
-              <small>CORTE</small>
-            </div>
-    
-            <div>
-              <span>◆</span>
-              <small>BARBA</small>
-            </div>
-    
-            <div>
-              <span>⌒</span>
-              <small>SOBRANCELHA</small>
-            </div>
-    
-            <div>
-              <span>♛</span>
-              <small>ESTILO</small>
-            </div>
-    
-          </div>
-    
-          <p class="frase-final">
-            MAIS QUE CORTE.<br>
-            É IDENTIDADE.
-          </p>
-    
+    <a class="btn-topo" href="#agendar">
+      AGENDAR
+    </a>
+  </header>
+
+  <main>
+
+    <section class="hero hero-nova" id="inicio">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-nova-conteudo">
+
+        <div class="emblema-imagem">
+          <img src="logo-darkwolf.png" alt="Dark Wolf Barbearia">
         </div>
-    
-      </section>
-  
+
+        <p class="slogan-principal">
+          SEU ESTILO EM BOAS MÃOS
+        </p>
+
+        <div class="acoes-inicio">
+
+          <a href="#servicos" class="botao-agendar-principal">
+            <span class="icone-botao">▣</span>
+            <span>AGENDAR HORÁRIO</span>
+            <span class="seta">›</span>
+          </a>
+
+          <a href="#agendar" class="botao-secundario">
+            <span class="icone-botao">☷</span>
+            <span>MEUS AGENDAMENTOS</span>
+            <span class="seta">›</span>
+          </a>
+
+        </div>
+
+        <div class="servicos-mini">
+
+          <div>
+            <span>✂</span>
+            <small>CORTE</small>
+          </div>
+
+          <div>
+            <span>◆</span>
+            <small>BARBA</small>
+          </div>
+
+          <div>
+            <span>⌒</span>
+            <small>SOBRANCELHA</small>
+          </div>
+
+          <div>
+            <span>♛</span>
+            <small>ESTILO</small>
+          </div>
+
+        </div>
+
+        <p class="frase-final">
+          MAIS QUE CORTE.<br>
+          É IDENTIDADE.
+        </p>
+
+      </div>
+
+    </section>
+
 
     <section class="servicos" id="servicos">
+
       <div class="titulo-secao">
         <p>NOSSOS SERVIÇOS</p>
         <h2>Escolha como quer sair na régua</h2>
       </div>
 
       <div class="grid-servicos">
+
         <article class="card-servico">
           <div class="icone-servico">✂️</div>
           <h3>Corte Masculino</h3>
           <p>Acabamento moderno e personalizado.</p>
           <strong>R$ 35,00</strong>
-          <button class="selecionar-servico" data-servico="Corte Masculino" data-preco="35">
+
+          <button
+            class="selecionar-servico"
+            data-servico="Corte Masculino"
+            data-preco="35"
+          >
             Selecionar
           </button>
         </article>
+
 
         <article class="card-servico">
           <div class="icone-servico">🧔</div>
           <h3>Barba</h3>
           <p>Desenho, acabamento e alinhamento.</p>
           <strong>R$ 35,00</strong>
-          <button class="selecionar-servico" data-servico="Barba" data-preco="35">
+
+          <button
+            class="selecionar-servico"
+            data-servico="Barba"
+            data-preco="35"
+          >
             Selecionar
           </button>
         </article>
+
 
         <article class="card-servico">
           <div class="icone-servico">💈</div>
           <h3>Corte + Barba</h3>
           <p>Combo completo para renovar o visual.</p>
           <strong>R$ 70,00</strong>
-          <button class="selecionar-servico" data-servico="Corte + Barba" data-preco="70">
+
+          <button
+            class="selecionar-servico"
+            data-servico="Corte + Barba"
+            data-preco="70"
+          >
             Selecionar
           </button>
         </article>
+
 
         <article class="card-servico">
           <div class="icone-servico">✨</div>
           <h3>Corte + Sobrancelha</h3>
           <p>Detalhes que fazem diferença no resultado.</p>
           <strong>R$ 40,00</strong>
-          <button class="selecionar-servico" data-servico="Corte + Sobrancelha" data-preco="40">
+
+          <button
+            class="selecionar-servico"
+            data-servico="Corte + Sobrancelha"
+            data-preco="40"
+          >
             Selecionar
           </button>
         </article>
+
       </div>
     </section>
+
+
     <section class="agendamento" id="agendar">
 
       <div class="titulo-secao">
         <p>AGENDAMENTO</p>
         <h2>Escolha o dia e o horário</h2>
       </div>
-    
+
       <div class="area-agendamento">
-    
+
         <div class="bloco-data">
-          <h3>Selecione a data</h3>
-    
-          <input
-            type="date"
-            id="dataAgendamento"
-          >
-        </div>
-    
-        <div class="bloco-horarios">
-          <h3>Horários disponíveis</h3>
-    
-          <div class="horarios">
-            <button class="horario">09:00</button>
-            <button class="horario">10:00</button>
-            <button class="horario">11:00</button>
-    
-            <button class="horario">13:00</button>
-            <button class="horario">14:00</button>
-            <button class="horario">15:00</button>
-    
-            <button class="horario">16:00</button>
-            <button class="horario">17:00</button>
-            <button class="horario">18:00</button>
-          </div>
-        </div>
-    
-      </div>
-    
-      <div class="resumo-agendamento">
-    
-        <div>
-          <span>Serviço</span>
-          <strong id="servicoEscolhido">
-            Nenhum serviço selecionado
-          </strong>
-        </div>
-    
-        <div>
-          <span>Valor</span>
-          <strong id="precoEscolhido">
-            R$ 0,00
-          </strong>
-        </div>
-    
-      </div>
-    
-      <button
-        class="btn-dourado btn-grande"
-        id="continuarAgendamento"
-        disabled
-      >
-        Continuar agendamento
-      </button>
-      <div class="dados-cliente" id="dadosCliente">
-
-        <h3>Seus dados</h3>
-      
-        <input
-          type="text"
-          id="nomeCliente"
-          placeholder="Nome completo"
-        >
-      
-        <input
-          type="tel"
-          id="telefoneCliente"
-          placeholder="WhatsApp"
-        >
-      
-        <button
-          id="confirmarAgendamento"
-          class="btn-dourado btn-grande"
-        >
-          Confirmar agendamento
-        </button>
-      
-      </div>
-    </section>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="script.js"></script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./service-worker.js");
-      });
-    }
-  </scrip
-
-  <footer class="rodape">
-    <p>© 2026 Dark Wolf Barbearia</p>
-  
-    <a href="admin.html" class="botao-adm">
-      🔒 Área Administrativa
-  <button id="btnInstalar" type="button">
-  📱 Baixar aplicativo
-</button>
-      </a>
-<button id="btnInstalar">
-  📲 Baixar aplicativo
-</button>
- <a href="admin.html" class="btn-admin">
-  🔒 Área Administrativa
-</a>
-
-<button id="btnInstalar" type="button">
-  📱 Baixar aplicativo
-</button>
-      </footer>
-</body>
-</html>
