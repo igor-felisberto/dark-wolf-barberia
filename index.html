@@ -243,9 +243,8 @@
       });
     }
   </script>
-  <button id="btnInstalar" style="display:none;">
+  
     📲 BAIXAR APLICATIVO
-  </button>
 
   <footer class="rodape">
     <p>© 2026 Dark Wolf Barbearia</p>
@@ -257,25 +256,5 @@
   📲 Baixar aplicativo
 </button>
   </footer>
-  <script>
-    let eventoInstalacao;
-  <button id="btnInstalar">
-    
-    window.addEventListener("beforeinstallprompt", (e) => {
-      e.preventDefault();
-      eventoInstalacao = e;
-      btnInstalar.style.display = "block";
-    });
-    
-    btnInstalar.addEventListener("click", async () => {
-      if (!eventoInstalacao) return;
-    
-      eventoInstalacao.prompt();
-      await eventoInstalacao.userChoice;
-    
-      eventoInstalacao = null;
-      btnInstalar.style.display = "none";
-    });
-    </script>
 </body>
 </html>
