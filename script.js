@@ -279,3 +279,25 @@ function mostrarConfirmacao(nome, servico, data, horario) {
           fundo.remove();
       });
 }
+
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+});
+
+const botaoInstalar = document.getElementById("btnInstalar");
+
+if (botaoInstalar) {
+  botaoInstalar.addEventListener("click", async () => {
+    if (!deferredPrompt) {
+      alert("A instalação ainda não está disponível. Tente atualizar a página.");
+      return;
+    }
+
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+  });
+}
