@@ -6,7 +6,6 @@
   <title>Dark Wolf Barbearia</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="./manifest.json">
- <link rel="icon" type="image/png" href="./icone-darkwolf.png">
   <meta name="theme-color" content="#111111">
 </head>
 <body>
@@ -249,7 +248,10 @@
       });
     }
   </script>
-  
+  <button id="btnInstalar" style="display:none;">
+    📲 BAIXAR APLICATIVO
+  </button>
+
   <footer class="rodape">
     <p>© 2026 Dark Wolf Barbearia</p>
   
@@ -257,5 +259,25 @@
       🔒 Área Administrativa
     </a>
   </footer>
+  <script>
+    let eventoInstalacao;
+    const btnInstalar = document.getElementById("btnInstalar");
+    
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      eventoInstalacao = e;
+      btnInstalar.style.display = "block";
+    });
+    
+    btnInstalar.addEventListener("click", async () => {
+      if (!eventoInstalacao) return;
+    
+      eventoInstalacao.prompt();
+      await eventoInstalacao.userChoice;
+    
+      eventoInstalacao = null;
+      btnInstalar.style.display = "none";
+    });
+    </script>
 </body>
 </html>
