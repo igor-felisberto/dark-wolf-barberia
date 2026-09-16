@@ -230,7 +230,7 @@ NOVO AGENDAMENTO ✅
 const linkWhatsApp =
   `https://wa.me/${numeroBarbearia}?text=${encodeURIComponent(mensagemWhatsApp)}`;
 
-window.open(linkWhatsApp, "_blank");
+window.location.href = linkWhatsApp;
   nomeCliente.value = "";
   telefoneCliente.value = "";
 
