@@ -1,4 +1,4 @@
-const CACHE_NAME = "dark-wolf-v2";
+const CACHE_NAME = "dark-wolf-v3";
 
 const arquivos = [
   "./",
