@@ -209,7 +209,28 @@ mostrarConfirmacao(
   agendamento.data,
   agendamento.horario
 );
+const numeroBarbearia = "5519990140064";
 
+const [anoWhats, mesWhats, diaWhats] = agendamento.data.split("-");
+const dataWhats = `${diaWhats}/${mesWhats}/${anoWhats}`;
+
+const mensagemWhatsApp = `
+🐺 DARK WOLF BARBEARIA
+
+NOVO AGENDAMENTO ✅
+
+👤 Cliente: ${nome}
+📱 WhatsApp: ${telefone}
+✂️ Serviço: ${agendamento.servico}
+💰 Valor: R$ ${Number(agendamento.preco).toFixed(2).replace(".", ",")}
+📅 Data: ${dataWhats}
+⏰ Horário: ${agendamento.horario}
+`;
+
+const linkWhatsApp =
+  `https://wa.me/${numeroBarbearia}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+
+window.open(linkWhatsApp, "_blank");
   nomeCliente.value = "";
   telefoneCliente.value = "";
 
