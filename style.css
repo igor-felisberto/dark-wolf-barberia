@@ -2102,3 +2102,30 @@ body.admin-page {
   font-weight: 700;
   font-size: 15px;
 }
+
+/* ===== BOTÃO INSTALAR APLICATIVO ===== */
+
+.area-instalar {
+  width: calc(100% - 40px);
+  max-width: 760px;
+  margin: 20px auto 40px;
+}
+
+#btnInstalar {
+  display: block;
+  width: 100%;
+  min-height: 56px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+
+  background: #fff;
+  color: #111;
+
+  border: 0;
+  border-radius: 14px;
+
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
